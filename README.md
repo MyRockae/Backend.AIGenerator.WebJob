@@ -5,7 +5,7 @@ Follow these detailed steps to contribute to the repository:
 1. **Clone the Repository**  
    - Open your terminal and run the following command to clone the repository:  
      ```bash
-     git clone https://github.com/MyRockae/QuizGenAI.git
+     git clone https://github.com/MyRockae/Backend.AIGenerator.WebJob.git
      ```
    - Navigate to the repository directory:  
      ```bash
