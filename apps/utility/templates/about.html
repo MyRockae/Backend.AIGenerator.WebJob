@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>About Rocky AI</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body class="about-page">
+
+  <!-- Top Navigation Menu -->
+  <div class="web-nav">
+    <nav class="top-nav">
+      <div class="logo">Rocky</div>
+      <!-- Hamburger Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}" class="active">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- About Content Section -->
+  <div class="about-content">
+    <!-- White Container for Text -->
+    <div class="white-container">
+      <h1>About Rockae</h1>
+      <p>
+        Rockae is an AI-powered platform designed to revolutionize educational assessments. It automatically transforms uploaded text into engaging quizzes, offering instant multiple-choice questions, real-time scoring, and actionable feedback. Built with an emphasis on security and scalability, Rockae streamlines the quiz creation process, making it accessible for educators, content creators, and learners alike. The platform leverages advanced natural language processing (NLP) technology to deliver efficient, automated quiz generation, enhancing both learning and assessment experiences. for a couple of seconds
+RockyAI is an AI-powered platform that transforms text into interactive quizzes. By leveraging advanced natural language processing, RockyAI automatically generates multiple-choice questions and provides instant, automated scoring. Designed for educators, content creators, and learners, it streamlines quiz creation and enhances the learning experience with secure and scalable technology.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Rockae | All Rights Reserved</p>
+  </footer>
+
+  {% load static %}
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

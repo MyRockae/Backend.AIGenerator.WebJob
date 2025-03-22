@@ -1,53 +1,67 @@
-### Guide on How to Make a Pull Request
+# Rockae.Domain.WebAPI
 
-Follow these detailed steps to contribute to the repository:
+## Overview
+Rockae.Domain.WebAPI is a comprehensive backend service built with Django REST Framework, designed for creating, managing, and delivering interactive quizzes, flashcards, user management, subscription handling, and advanced generative AI integrations for content automation.
 
-1. **Clone the Repository**  
-   - Open your terminal and run the following command to clone the repository:  
-     ```bash
-     git clone https://github.com/MyRockae/Backend.AIGenerator.WebJob.git
-     ```
-   - Navigate to the repository directory:  
-     ```bash
-     cd QuizGenAI
-     ```
+## Database Schema Details
 
-2. **Create a Descriptive Folder for Your Work**  
-   - Within the cloned repository, create a new folder that clearly reflects the purpose of your contribution.  
-   - **Example:** For a module that downloads files over FTP, name the folder `test_module_to_download_files_over_ftp`.
+For comprehensive details on the database schema, please refer to the [Database Schema Documentation](https://github.com/MyRockae/Rockae.Domain.WebAPI/blob/main/BackendSchema.md).
 
-3. **Add Your Files**  
-   - Place your Jupyter Notebook (`.ipynb`) and any supporting files into the new folder.  
-   - Ensure your files are organized and well-documented so that reviewers can understand your contribution.
+## What technologies are used for this project?
 
-4. **Create a Feature Branch**  
-   - Before making any changes, create a new branch to isolate your work from the main branch:  
-     ```bash
-     git checkout -b feature/test_module_to_download_files_over_ftp
-     ```
+This project is built with .
 
-5. **Stage and Commit Your Changes**  
-   - Stage all your changes by running:  
-     ```bash
-     git add .
-     ```
-   - Commit your changes with a clear, descriptive commit message:  
-     ```bash
-     git commit -m "Add module to download files over FTP with Jupyter Notebook implementation"
-     ```
+- Python
+- Django
+- Django rest-framework
 
-6. **Push Your Feature Branch to the Remote Repository**  
-   - Push your branch to GitHub:  
-     ```bash
-     git push origin feature/test_module_to_download_files_over_ftp
-     ```
+Below is a set of step-by-step instructions in Markdown format that you can add directly to your README or another documentation file. These steps cover creating a feature branch, pushing your changes, and then creating a pull request (PR) on GitHub.
 
-7. **Create a Pull Request (PR)**  
-   - Go to the GitHub repository page and navigate to the "Pull Requests" tab.
-   - Click on "New Pull Request."
-   - Select your feature branch (`feature/test_module_to_download_files_over_ftp`) as the source and the main branch as the target.
-   - Provide a detailed description of your changes, the purpose behind them, and any additional context that might help reviewers understand your work.
+---
 
-8. **Wait for Review and Approval**  
-   - Once your pull request is submitted, wait for the project maintainers to review your changes.
-   - Be responsive to any feedback or requested modifications until your PR is approved and merged.
+
+
+
+## How to Push Changes Using a Feature Branch and Create a Pull Request
+
+1. **Clone the Repository (if you haven’t already):**  
+   Open your terminal and run:  
+   ```bash
+   git clone https://github.com/MyRockae/Rockae.Domain.WebAPI.git
+   cd Rockae.Domain.WebAPI
+   ```
+
+2. **Create a New Feature Branch:**  
+   Create and switch to a new branch for your feature. Replace `your-feature-name` with a descriptive name for your feature.
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make Changes and Save Your Work:**  
+   Edit your code locally. When you are ready, stage your changes with:
+   ```bash
+   git add .
+   ```
+   *(Tip: You can replace the dot (`.`) with specific file names if you don’t want to add everything.)*
+
+4. **Commit Your Changes:**  
+   Commit your staged changes with a meaningful commit message:
+   ```bash
+   git commit -m "Add feature: description of your changes"
+   ```
+
+5. **Push Your Feature Branch to GitHub:**  
+   Push your branch and set the upstream branch:
+   ```bash
+   git push -u origin feature/your-feature-name
+   ```
+
+6. **Create a Pull Request (PR) on GitHub:**  
+   - Open your web browser and navigate to your repository: [https://github.com/MyRockae/Rockae.Domain.WebAPI](https://github.com/MyRockae/Rockae.Domain.WebAPI)
+   - You should see a prompt to create a pull request for your recently pushed branch. Click **"Compare & pull request"**.
+   - Fill in the title and description for your PR, then click **"Create pull request"**.
+
+7. **Review and Merge:**  
+   Once the PR is created, it can be reviewed by our team. After approval, the changes can be merged into the main branch and the CICD pipline would automatically update the production app.
+
+---

@@ -1,0 +1,280 @@
+/* ============================================ 
+   GLOBAL STYLES & RESET
+============================================ */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Allow scrolling */
+html, 
+body {
+  background: #0e4bf1;
+  overflow-x: hidden; /* keep X hidden if you want to prevent horizontal scroll */
+  overflow-y: auto;   /* enable vertical scrolling */
+}
+
+/* Footer if you have one */
+.footer {
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  padding: 15px 0;
+  position: static; /* remove absolute/fixed positioning */
+}
+
+/* ============================================
+   NAV MENU ONLY
+============================================ */
+.web-nav .hamburger {
+  display: none; /* Hide on desktop by default */
+  cursor: pointer;
+}
+
+.web-nav .hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.web-nav .top-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1900px;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(2, 37, 62, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  z-index: 1000;
+}
+
+.web-nav .top-nav .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.web-nav .top-nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0px;
+}
+
+.web-nav .top-nav .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.web-nav .top-nav .nav-links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ef689e;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.web-nav .top-nav .nav-links li a:hover::before {
+  width: 100%;
+}
+
+.web-nav .get-started-btn {
+  padding: 10px 20px;
+  background-color: #ef689e;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.web-nav .get-started-btn:hover {
+  background-color: #e30449;
+}
+
+@media (max-width: 900px) {
+
+  /* This rearranges the nav if you want, but not mandatory */
+  .web-nav .top-nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 20px;
+  }
+
+  /* IMPORTANT: Hide nav links on mobile by default */
+  .web-nav .top-nav .nav-links {
+    display: none; /* hide by default */
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  /* When the nav has .active, show the links */
+  .web-nav .top-nav.active .nav-links {
+    display: flex;
+  }
+
+  /* Adjust the link style for smaller screens */
+  .web-nav .top-nav .nav-links li a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  /* Show the hamburger on mobile */
+  .web-nav .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000; /* So it appears above everything */
+  }
+
+}
+
+/* Footer if you have one */
+.footer {
+    position: fixed;       /* Stay in place when scrolling */
+    left: 0;
+    right: 0;
+    bottom: 0;            /* Lock to bottom */
+    height: 60px;         /* Adjust as needed */
+    text-align: center;
+    background: rgba(167, 171, 173, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 14px;
+    padding: 10px;
+    line-height: 40px;    /* Vertically center text if needed */
+    z-index: 9999;        /* Ensure it's on top of other elements */
+  }
+
+
+  /* ============================================
+   WHITE CONTAINER FOR TEXT
+============================================ */
+.white-container {
+    background: white;
+    color: #0e4bf1;
+    padding: 40px;
+    max-width: 800px;
+    margin: 100px auto; /* centers container and provides top margin */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+
+
+/* Additional styles for the hero section */
+/* General styles for the hero section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 100%;
+    gap: 0;
+}
+
+/* Image styles to fit within container */
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    object-fit: contain;
+}
+
+/* Text container styling */
+.text-container {
+    text-align: center;
+    color: white;
+}
+
+.container {
+    max-width: 500px;
+}
+
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #ef689e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e30449;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+    }
+    .text-container {
+        order: 2;
+        width: 90%;
+    }
+    .image-container {
+        order: 1;
+        width: 90%;
+    }
+    .banner-image {
+        max-width: 90%;
+    }
+}
+
+.logo img.banner-image {
+    max-height: 40px;  /* Adjust this value as needed */
+    width: auto;
+    display: block;
+  }
+
+  .logo img.banner-image {
+    max-height: 60px; /* Keep your original size */
+    width: auto;
+    display: block;
+    transform: scale(3.0); /* Scales the image up by 20% */
+    transform-origin: center;
+  }
+
+
+  
