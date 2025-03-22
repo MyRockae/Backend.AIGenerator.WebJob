@@ -1,0 +1,11 @@
+# Ignore Virtual Environment
+webapivenv/
+venvwebapi/
+venvgenerator/
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+# Ignore environment variables
+.env
+*.sqlite3  # Ignore SQLite DB (optional)

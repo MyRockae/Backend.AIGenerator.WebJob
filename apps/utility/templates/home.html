@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocky AI - Home</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body class="home-page">
+
+  <!-- Top Navigation Menu -->
+  <div class="web-nav">
+    <nav class="top-nav">
+      <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Banner" class="banner-image" /></div>
+      <!-- Hamburger Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Hero Section: Banner on left, Container on right -->
+  <div class="hero-section">
+    <!-- Left Half: Banner Image -->
+    <div class="half image-container">
+      <img src="{% static 'images/banner.png' %}" alt="Banner" class="banner-image" />
+    </div>
+    <!-- Right Half: Main Content -->
+    <div class="half text-container">
+      <div class="container">
+        <h1>API Documentation</h1>
+        <div class="buttons-container">
+          <a href="{% url 'admin:index' %}" class="btn">Admin</a>
+          <a href="{% url 'swagger-ui' %}" class="btn">Swagger</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Rockae | All Rights Reserved</p>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
