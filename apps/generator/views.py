@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 import threading
 from django.http import JsonResponse, HttpResponseForbidden
 from django.core.cache import cache
@@ -47,6 +48,7 @@ def api_key_required(view_func):
     description="Endpoint that checks if a worker is running and, if not, starts it.",
     tags=["Worker"]
 )
+@csrf_exempt
 @api_view(['POST'])
 @api_key_required
 @parser_classes([MultiPartParser])
