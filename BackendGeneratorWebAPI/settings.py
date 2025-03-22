@@ -139,7 +139,7 @@ SPECTACULAR_SETTINGS = {
     # Add a URL to be displayed on Swagger
     'SERVERS': [
         {'url': 'http://127.0.0.1:8000/', 'description': 'Local Development Server'},
-        {'url': 'https://web-production-6a37.up.railway.app/', 'description': 'Production Server'}  
+        {'url': 'https://web-production-a0312.up.railway.app/', 'description': 'Production Server'}  
     ],
 
     # Contact Information

@@ -13,7 +13,7 @@
 /* Allow scrolling */
 html, 
 body {
-  background: #0e4bf1;
+  background: #000000;
   overflow-x: hidden; /* keep X hidden if you want to prevent horizontal scroll */
   overflow-y: auto;   /* enable vertical scrolling */
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .web-nav .top-nav .logo {
-  font-size: 26px;
+  font-size: 10px;
   font-weight: bold;
   color: #fff;
   letter-spacing: 1px;
@@ -263,13 +263,13 @@ body {
 }
 
 .logo img.banner-image {
-    max-height: 40px;  /* Adjust this value as needed */
+    max-height: 10px;  /* Adjust this value as needed */
     width: auto;
     display: block;
   }
 
   .logo img.banner-image {
-    max-height: 60px; /* Keep your original size */
+    max-height: 20px; /* Keep your original size */
     width: auto;
     display: block;
     transform: scale(3.0); /* Scales the image up by 20% */
