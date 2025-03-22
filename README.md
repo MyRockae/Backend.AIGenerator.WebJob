@@ -1,7 +1,7 @@
-# Rockae.Domain.WebAPI
+# Backend.AIGenerator.WebJob
 
 ## Overview
-Rockae.Domain.WebAPI is a comprehensive backend service built with Django REST Framework, designed for creating, managing, and delivering interactive quizzes, flashcards, user management, subscription handling, and advanced generative AI integrations for content automation.
+an asynchronous service that processes file uploads, extracts text content using OCR, and interfaces with external LLM APIs to generate quizzes, flashcards, and other interactive educational content, ensuring efficient file handling and reliable data transfer to third-party AI services for real-time content generation.
 
 ## Database Schema Details
 
@@ -27,7 +27,7 @@ Below is a set of step-by-step instructions in Markdown format that you can add 
 1. **Clone the Repository (if you haven’t already):**  
    Open your terminal and run:  
    ```bash
-   git clone https://github.com/MyRockae/Rockae.Domain.WebAPI.git
+   git clone https://github.com/MyRockae/Backend.AIGenerator.WebJob.git
    cd Rockae.Domain.WebAPI
    ```
 
@@ -57,7 +57,7 @@ Below is a set of step-by-step instructions in Markdown format that you can add 
    ```
 
 6. **Create a Pull Request (PR) on GitHub:**  
-   - Open your web browser and navigate to your repository: [https://github.com/MyRockae/Rockae.Domain.WebAPI](https://github.com/MyRockae/Rockae.Domain.WebAPI)
+   - Open your web browser and navigate to your repository: [https://github.com/MyRockae/Backend.AIGenerator.WebJob](https://github.com/MyRockae/Backend.AIGenerator.WebJob)
    - You should see a prompt to create a pull request for your recently pushed branch. Click **"Compare & pull request"**.
    - Fill in the title and description for your PR, then click **"Create pull request"**.
 
