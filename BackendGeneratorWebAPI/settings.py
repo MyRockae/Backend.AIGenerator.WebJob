@@ -72,6 +72,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://rockae.com",
+    "http://localhost:5173",
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
