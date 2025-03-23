@@ -79,7 +79,7 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.rockae\.com$",
 ]
 
-#CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'BackendGeneratorWebAPI.urls'
 
