@@ -5,6 +5,7 @@ import pytesseract
 import os
 import easyocr
 import numpy as np
+reader = easyocr.Reader(['en'])
 
 def readPdfFile(uploaded_file):
     file_content = ""
@@ -28,7 +29,6 @@ def readImageFile2(uploaded_file):
 def readImageFile(uploaded_file):
     image = Image.open(uploaded_file)
     image_np = np.array(image)
-    reader = easyocr.Reader(['en'])
     text_list = reader.readtext(image_np, detail=0)
     file_content = " ".join(text_list)
     return file_content
