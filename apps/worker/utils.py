@@ -2,11 +2,12 @@ import time
 from django.core.cache import cache
 from apps.worker.models import TaskJob
 from django.contrib.auth import get_user_model
-from apps.generator.gemini.gemini_repositories import gemini_flash_2_0_quiz_generator,gemini_flash_2_0_flashcard_generator
+from apps.generator.gemini.gemini_repositories import gemini_flash_2_0_quiz_generator,gemini_flash_2_0_flashcard_generator,gemini_flash_2_0_flashcard_auto_generator
 from apps.generator.file_reader import extract_text_from_file
 from apps.s3_buckets.supabase_storage import download_file
 from datetime import timedelta
 from django.utils import timezone
+from apps.generator.utils import check_generative_ai_usage
 
 def start_worker():
     """
@@ -33,6 +34,7 @@ def start_worker():
                     num_questions = payload.get('num_questions')
                     difficulty = payload.get('difficulty')
                     requested_ai_model = payload.get('requested_ai_model')
+                    should_make_flashcard = payload.get('should_make_flashcard')
                     file_name = payload.get('file_name')
                     
                     try:
@@ -42,6 +44,8 @@ def start_worker():
                             downloaded_file = download_file(file_name, bucket_name="generator-input-files")
                             downloaded_file.name = file_name
                             file_content = extract_text_from_file(downloaded_file)
+                            check_generative_ai_usage(user_id,num_questions,file_content)
+                            
                         
                         if requested_ai_model == "Gemini-flash-2" and job.task_type == "quiz_file":
                             User = get_user_model()
@@ -53,6 +57,10 @@ def start_worker():
                                 difficulty=difficulty,
                                 notes=file_content  # Pass the extracted text as notes.
                             )
+                            #for aut generate flashcard
+                            if should_make_flashcard:
+                                gemini_flash_2_0_flashcard_auto_generator(target_id, num_questions)
+                            
                             job.result = result
                             job.status = 'SUCCESS'
 
