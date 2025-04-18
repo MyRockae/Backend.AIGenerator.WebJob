@@ -2,7 +2,7 @@ from rest_framework import status
 from apps.subscription.models import UserSubscription
 from apps.shared.models import CustomWebApiException
 
-def check_generative_ai_usage(user, num_questions, notes, max_questions=10, max_notes_length=200):
+def check_generative_ai_usage(user, num_questions, notes, max_questions=100, max_notes_length=15000):
     try:
         subscription = UserSubscription.objects.get(user=user)
     except UserSubscription.DoesNotExist:
